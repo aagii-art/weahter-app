@@ -4,10 +4,10 @@ import { Center } from "./component/center";
  const  Home = () => {
  
   return (
-    <>
-     <Background/>
-     <Center/>
-    </>
+     < div className=" relative " >
+       <Background/>
+       <Center/>
+     </div>
   )
 }
 
