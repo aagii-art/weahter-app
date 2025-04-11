@@ -1,5 +1,4 @@
 
-
 export const Logo = () => {
     return (
         <div className=" absolute z-1 top-[50%]  left-[50%]  -translate-y-[50%] h-[200px] w-[100px]" >

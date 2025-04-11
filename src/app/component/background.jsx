@@ -6,7 +6,7 @@ import { Black } from "./black";
 import { White } from "./white";
 
 export const Background = () => {
-  const apiKey = "105555e8dcc8463192223159250704";
+  const apiKey = process.env.NEXT_PUBLIC_KEY;
   const [city, setcity] = useState("ulaanbaatar");
   const [input, setinput] = useState("");
   const [data, setdata] = useState(null);
@@ -15,20 +15,18 @@ export const Background = () => {
 
   const suggestF = async (v) => {
     try {
-      loading(true)
+      loading(true);
       const hariu = await axios.get(
         `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${v}`
       );
       setsuggest(hariu.data);
     } catch (e) {
-      loading(true)
-      console.log("axios get error");
+      loading(true);
+      console.log("axios get error", e);
       setsuggest([]);
-    } finally {
-
-    }
+    } 
   };
-  
+
 
   const inputChange = (e) => {
     const value = e.target.value;
@@ -50,15 +48,12 @@ export const Background = () => {
     };
     fetchData();
   }, [city]);
-console.log( "suggest", suggest);
-console.log("data", data);
-
 
   const selectCity = (v) => {
     setcity(v);
     setsuggest([]);
     setinput("");
-    loading(false)
+    loading(false);
   };
 
   return (
