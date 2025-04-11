@@ -8,7 +8,6 @@ export const White = ( {inputChange, input, suggest, data, selectCity, load, val
         <div className=" relative h-[828px]  w-[414px]  " >
 
           <div className="flex flex-col  absolute z-2  w-[500px]  shadow-black right-0 -translate-y-[100%] "  >
-                 
                  <div className="flex items-center rounded-full bg-[white]  w-[100%] p-[10px_14px] "  >
                     <Search className="  w-[35px] h-[35px] text-gray-700 " />
                     <input
@@ -19,8 +18,6 @@ export const White = ( {inputChange, input, suggest, data, selectCity, load, val
                       className=" flex-1   rounded-[0px] text-[32px] font-bold h-[45px] border-none ml-[24px] focus:outline-none placeholder:text-gray-400 "
                     />
                  </div>
-          
-          
            </div>
 
            {suggest.length > 0 &&
@@ -32,7 +29,6 @@ export const White = ( {inputChange, input, suggest, data, selectCity, load, val
                                     <MapPin className="ml-[20px]" />
                                     <span> {obj.name}, {obj.country}</span>
                            </li>
-                           
                      ))}
                   </ul>
                  } 
@@ -51,7 +47,7 @@ export const White = ( {inputChange, input, suggest, data, selectCity, load, val
                               <MapPin  className="ml-auto h-[32px] w-[32px] text-gray-800 " />
                            </div>
 
-                           <div className="w-[100%]  flex justify-center mt-[40px] mb-[40px] " >
+                           <div className="w-[100%] flex justify-center mt-[40px] mb-[40px] " >
                               <img src="photos/sunny.webp" alt="" className="h-[274px] w-[274px] "  />
                            </div>
                             

@@ -19,7 +19,6 @@ export const Background = () => {
       const hariu = await axios.get(
         `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${v}`
       );
-      // loading(false)
       setsuggest(hariu.data);
     } catch (e) {
       loading(true)
